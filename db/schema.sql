@@ -5,10 +5,11 @@ CREATE DATABASE burger_db;
 
 USE burger_db;
 
+DROP TABLE IF EXISTS burgers;
 -- Created burgers table.
 CREATE TABLE burgers (
   id int NOT NULL AUTO_INCREMENT,
-  burger_name VARCHAR,
-  devoured boolean,
+  burger_name VARCHAR(250) not null,
+  devoured boolean default false,
   PRIMARY KEY (id)
 );
