@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center" id="top">
+            <img src="/assets/images/burger.jpg" alt="burger" />
+            <h1>{{title}}</h1>
+        </div>
+        <div class="col-md-6 text-center" class="task">
+            {{#each burger_data}}
+            <div class="row">
+                <div class="col-md-9 text-center">
+                    {{this.id}}. {{this.burger_name}}
+                </div>
+                <div class="col-md-3 text-center">
+                    <form class="devour-form button-size">
+                        <input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+                        <button type="submit" class="btn btn-default"> Devour it!</button>
+                    </form>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center enter_section">
+                <form action="/burger/create" method="POST">
+                    <input type="text" class="form-control" name="burger_name" value="" id="enter_text">
+                    <button type="submit" class="btn btn-primary" id="text-enter-button"> submit</button>
+                </form>
+                <h6>Choose the type of burger you want using the "submit" button</h6>
+            </div>
+        </div>
+    </div>
+</div>

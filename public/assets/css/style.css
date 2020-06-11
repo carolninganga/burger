@@ -1,0 +1,8 @@
+body {
+    width: 90%;
+    height: 800px;
+    background-color: rgb(246, 168, 72);
+}
+#top {
+    margin-top: 30px;
+}
